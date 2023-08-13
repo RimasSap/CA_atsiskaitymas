@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Earnings Calculator</title>
+</head>
+<body>
+    <h1>Electricity Earnings Calculator</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="ivado_galingumas_kW">Įveskite įvado galingumą (kW):</label>
+        <input type="text" id="ivado_galingumas_kW" name="ivado_galingumas_kW">
+
+        <label for="calculation_date">Pasirinkite datą:</label>
+        <input type="date" id="calculation_date" name="calculation_date">
+
+        <button type="submit">Apskaičiuoti uždarbį</button>
+    </form>
+
+    {% if total_earnings is not None %}
+        <h2>Apskaičiuotas uždarbis už pasirinktą dieną:</h2>
+        <p>{{ total_earnings }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+<!--idedamas grafikas-->
+    {% if price_chart_image %}
+
+    <img src="{{ price_chart_image }}" alt="Elektros kainų diagrama">
+    {% endif %}
+
+</body>
+</html>
