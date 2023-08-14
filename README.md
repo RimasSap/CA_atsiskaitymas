@@ -17,5 +17,7 @@ Installation:
     python manage.py runserver
     Go to: http://127.0.0.1:8000/charge_sharing/
 
+Contact: rimasap@gmail.com
+
 
 # CA_atsiskaitymas
