@@ -35,7 +35,7 @@ class Command(BaseCommand):
                 # making Django time:
                 start_time = timezone.make_aware(datetime(current_year, current_month, current_day, start_time.hour), timezone.get_default_timezone())
 
-                # separate time from start_time
+                # Atskiriam metus, mėnesį ir dieną iš laiko
                 year = start_time.year
                 month = start_time.month
                 day = start_time.day
