@@ -10,7 +10,7 @@ Installation:
     pip install django
     Download zipped project
     pip install -r requirements.txt
-    download files to the newly created Django project
+    transfer files to the newly created Django project
     python manage.py makemigrations
     python manage.py migrate
     python manage.py data_import
